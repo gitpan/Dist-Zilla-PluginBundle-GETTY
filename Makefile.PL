@@ -23,7 +23,6 @@ my %WriteMakefileArgs = (
   'NAME' => 'Dist::Zilla::PluginBundle::GETTY',
   'PREREQ_PM' => {
     'Dist::Zilla' => '2.100922',
-    'Dist::Zilla::Plugin::AutoPrereq' => '1.100130',
     'Dist::Zilla::Plugin::BumpVersionFromGit' => '0',
     'Dist::Zilla::Plugin::GithubMeta' => '0',
     'Dist::Zilla::Plugin::PodWeaver' => '3.092971',
@@ -39,7 +38,7 @@ my %WriteMakefileArgs = (
     'Pod::Weaver' => '3.100310',
     'Pod::Weaver::Config::Assembler' => '0'
   },
-  'VERSION' => '0.001',
+  'VERSION' => '0.002',
   'test' => {
     'TESTS' => 't/*.t'
   }

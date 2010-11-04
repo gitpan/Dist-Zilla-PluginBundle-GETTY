@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::GETTY;
 BEGIN {
-  $Dist::Zilla::PluginBundle::GETTY::VERSION = '0.001';
+  $Dist::Zilla::PluginBundle::GETTY::VERSION = '0.002';
 }
 # ABSTRACT: BeLike::GETTY when you build your dists
 
@@ -48,9 +48,6 @@ sub configure {
     if $self->is_task and $self->weaver_config ne '@GETTY';
 
   $self->add_bundle('@Basic');
-
-  $self->add_plugins('AutoPrereqs');
-
 
   unless ($self->manual_version) {
     if ($self->is_task) {
@@ -117,7 +114,7 @@ Dist::Zilla::PluginBundle::GETTY - BeLike::GETTY when you build your dists
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
@@ -125,7 +122,6 @@ This is the plugin bundle that GETTY uses.  It is equivalent to:
 
   [@Basic]
 
-  [AutoPrereqs]
   [Git::NextVersion]
   [PkgVersion]
   [MetaConfig]
