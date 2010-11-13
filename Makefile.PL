@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.31;
 
 my %WriteMakefileArgs = (
   'ABSTRACT' => 'BeLike::GETTY when you build your dists',
-  'AUTHOR' => 'Torsten Raudssus <torsten@raudssus.de>',
+  'AUTHOR' => 'Torsten Raudssus <torsten@raudssus.de> L<http://www.raudssus.de/>',
   'BUILD_REQUIRES' => {
     'Test::More' => '0.96'
   },
@@ -22,23 +22,18 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'Dist::Zilla::PluginBundle::GETTY',
   'PREREQ_PM' => {
-    'Dist::Zilla' => '2.100922',
+    'Dist::Zilla' => '1.092990',
     'Dist::Zilla::Plugin::BumpVersionFromGit' => '0',
     'Dist::Zilla::Plugin::GithubMeta' => '0',
+    'Dist::Zilla::Plugin::LocalInstall' => '0',
     'Dist::Zilla::Plugin::PodWeaver' => '3.092971',
     'Dist::Zilla::Plugin::Repository' => '0',
     'Dist::Zilla::Plugin::TaskWeaver' => '0.093330',
-    'Dist::Zilla::PluginBundle::Basic' => '0',
-    'Dist::Zilla::PluginBundle::Git' => '0',
-    'Dist::Zilla::Role::PluginBundle::Easy' => '0',
-    'Moose' => '0',
-    'Moose::Autobox' => '0',
     'Pod::Elemental' => '0.092970',
     'Pod::Elemental::Transformer::List' => '0',
-    'Pod::Weaver' => '3.100310',
-    'Pod::Weaver::Config::Assembler' => '0'
+    'Pod::Weaver' => '3.100310'
   },
-  'VERSION' => '0.002',
+  'VERSION' => '0.003',
   'test' => {
     'TESTS' => 't/*.t'
   }

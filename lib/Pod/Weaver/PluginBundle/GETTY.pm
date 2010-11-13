@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Pod::Weaver::PluginBundle::GETTY;
 BEGIN {
-  $Pod::Weaver::PluginBundle::GETTY::VERSION = '0.002';
+  $Pod::Weaver::PluginBundle::GETTY::VERSION = '0.003';
 }
 # ABSTRACT: GETTY's default Pod::Weaver config
 
@@ -37,6 +37,7 @@ sub mvp_bundle_config {
   push @plugins, (
     [ '@GETTY/Leftovers', _exp('Leftovers'), {} ],
     [ '@GETTY/postlude',  _exp('Region'),    { region_name => 'postlude' } ],
+    [ '@GETTY/Bugs',      _exp('Bugs'),   {} ],
     [ '@GETTY/Authors',   _exp('Authors'),   {} ],
     [ '@GETTY/Legal',     _exp('Legal'),     {} ],
     [ '@GETTY/List',      _exp('-Transformer'), { 'transformer' => 'List' } ],
@@ -56,7 +57,7 @@ Pod::Weaver::PluginBundle::GETTY - GETTY's default Pod::Weaver config
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 DESCRIPTION
 
@@ -80,11 +81,11 @@ C<-Transformer> with L<Pod::Elemental::Transformer::List>
 
 =head1 AUTHOR
 
-Torsten Raudssus <torsten@raudssus.de>
+Torsten Raudssus <torsten@raudssus.de> L<http://www.raudssus.de/>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Torsten Raudssus.
+This software is copyright (c) 2010 by L<Torsten Raudssus|http://www.raudssus.de/>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

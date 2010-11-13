@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::GETTY;
 BEGIN {
-  $Dist::Zilla::PluginBundle::GETTY::VERSION = '0.002';
+  $Dist::Zilla::PluginBundle::GETTY::VERSION = '0.003';
 }
 # ABSTRACT: BeLike::GETTY when you build your dists
 
@@ -77,6 +77,7 @@ sub configure {
     PodSyntaxTests
     Repository
 	GithubMeta
+	LocalInstall
   ));
 
   $self->add_plugins(
@@ -114,7 +115,7 @@ Dist::Zilla::PluginBundle::GETTY - BeLike::GETTY when you build your dists
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 DESCRIPTION
 
@@ -129,6 +130,7 @@ This is the plugin bundle that GETTY uses.  It is equivalent to:
   [NextRelease]
   [PodSyntaxTests]
   [GithubMeta]
+  [LocalInstall]
 
   [PodWeaver]
   config_plugin = @GETTY
@@ -144,11 +146,11 @@ C<manual_version> argument is given, AutoVersion is omitted.
 
 =head1 AUTHOR
 
-Torsten Raudssus <torsten@raudssus.de>
+Torsten Raudssus <torsten@raudssus.de> L<http://www.raudssus.de/>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Torsten Raudssus.
+This software is copyright (c) 2010 by L<Torsten Raudssus|http://www.raudssus.de/>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
