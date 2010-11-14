@@ -21,13 +21,14 @@ requires:
   Dist::Zilla::Plugin::PodWeaver: 3.092971
   Dist::Zilla::Plugin::Repository: 0
   Dist::Zilla::Plugin::TaskWeaver: 0.093330
+  Dist::Zilla::PluginBundle::Git: 0
   Pod::Elemental: 0.092970
   Pod::Elemental::Transformer::List: 0
   Pod::Weaver: 3.100310
 resources:
   homepage: http://github.com/Getty/p5-dist-zilla-pluginbundle-getty/tree
   repository: git://github.com/Getty/p5-dist-zilla-pluginbundle-getty.git
-version: 0.003
+version: 0.004
 x_Dist_Zilla:
   plugins:
     -

@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Pod::Weaver::PluginBundle::GETTY;
 BEGIN {
-  $Pod::Weaver::PluginBundle::GETTY::VERSION = '0.003';
+  $Pod::Weaver::PluginBundle::GETTY::VERSION = '0.004';
 }
 # ABSTRACT: GETTY's default Pod::Weaver config
 
@@ -57,7 +57,7 @@ Pod::Weaver::PluginBundle::GETTY - GETTY's default Pod::Weaver config
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 DESCRIPTION
 

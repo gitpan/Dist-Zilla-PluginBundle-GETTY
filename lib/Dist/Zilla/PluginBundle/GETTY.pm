@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::GETTY;
 BEGIN {
-  $Dist::Zilla::PluginBundle::GETTY::VERSION = '0.003';
+  $Dist::Zilla::PluginBundle::GETTY::VERSION = '0.004';
 }
 # ABSTRACT: BeLike::GETTY when you build your dists
 
@@ -115,7 +115,7 @@ Dist::Zilla::PluginBundle::GETTY - BeLike::GETTY when you build your dists
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 DESCRIPTION
 
@@ -139,6 +139,7 @@ This is the plugin bundle that GETTY uses.  It is equivalent to:
 
   [@Git]
   tag_format = %v
+  push_to = origin
 
 If the C<task> argument is given to the bundle, PodWeaver is replaced with
 TaskWeaver and Git::NextVersion is replaced with AutoVersion.  If the
