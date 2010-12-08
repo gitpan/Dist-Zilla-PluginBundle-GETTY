@@ -15,6 +15,7 @@ meta-spec:
 name: Dist-Zilla-PluginBundle-GETTY
 requires:
   Dist::Zilla: 1.092990
+  Dist::Zilla::Plugin::Authority: 0
   Dist::Zilla::Plugin::BumpVersionFromGit: 0
   Dist::Zilla::Plugin::GithubMeta: 0
   Dist::Zilla::Plugin::LocalInstall: 0
@@ -28,7 +29,7 @@ requires:
 resources:
   homepage: http://github.com/Getty/p5-dist-zilla-pluginbundle-getty/tree
   repository: git://github.com/Getty/p5-dist-zilla-pluginbundle-getty.git
-version: 0.004
+version: 0.005
 x_Dist_Zilla:
   plugins:
     -
@@ -124,6 +125,10 @@ x_Dist_Zilla:
       name: '@GETTY/LocalInstall'
       version: 0.001
     -
+      class: Dist::Zilla::Plugin::Authority
+      name: '@GETTY/Authority'
+      version: 1.000
+    -
       class: Dist::Zilla::Plugin::Prereqs
       config:
         Dist::Zilla::Plugin::Prereqs:
@@ -188,3 +193,4 @@ x_Dist_Zilla:
     config:
       is_trial: 0
     version: 4.102342
+x_authority: cpan:GETTY

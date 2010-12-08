@@ -1,6 +1,9 @@
 package Dist::Zilla::PluginBundle::GETTY;
 BEGIN {
-  $Dist::Zilla::PluginBundle::GETTY::VERSION = '0.004';
+  $Dist::Zilla::PluginBundle::GETTY::AUTHORITY = 'cpan:GETTY';
+}
+BEGIN {
+  $Dist::Zilla::PluginBundle::GETTY::VERSION = '0.005';
 }
 # ABSTRACT: BeLike::GETTY when you build your dists
 
@@ -69,16 +72,23 @@ sub configure {
     }
   }
 
-  $self->add_plugins(qw(
-    PkgVersion
-    MetaConfig
-    MetaJSON
-    NextRelease
-    PodSyntaxTests
-    Repository
-	GithubMeta
-	LocalInstall
-  ));
+	$self->add_plugins(qw(
+		PkgVersion
+		MetaConfig
+		MetaJSON
+		NextRelease
+		PodSyntaxTests
+		Repository
+		GithubMeta
+		LocalInstall
+	));
+
+	$self->add_plugins([
+		'Authority' => {
+			authority => 'cpan:GETTY',
+			do_metadata => 1,
+		}
+	]);
 
   $self->add_plugins(
     [ Prereqs => 'TestMoreWithSubtests' => {
@@ -115,7 +125,7 @@ Dist::Zilla::PluginBundle::GETTY - BeLike::GETTY when you build your dists
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 DESCRIPTION
 
@@ -131,6 +141,10 @@ This is the plugin bundle that GETTY uses.  It is equivalent to:
   [PodSyntaxTests]
   [GithubMeta]
   [LocalInstall]
+
+  [Authority]
+  authority = cpan:GETTY
+  do_metadata = 1
 
   [PodWeaver]
   config_plugin = @GETTY
