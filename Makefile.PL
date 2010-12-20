@@ -26,7 +26,7 @@ my %WriteMakefileArgs = (
     'Dist::Zilla::Plugin::Authority' => '0',
     'Dist::Zilla::Plugin::BumpVersionFromGit' => '0',
     'Dist::Zilla::Plugin::GithubMeta' => '0',
-    'Dist::Zilla::Plugin::LocalInstall' => '0',
+    'Dist::Zilla::Plugin::InstallRelease' => '0',
     'Dist::Zilla::Plugin::PodWeaver' => '3.092971',
     'Dist::Zilla::Plugin::Repository' => '0',
     'Dist::Zilla::Plugin::TaskWeaver' => '0.093330',
@@ -35,7 +35,7 @@ my %WriteMakefileArgs = (
     'Pod::Elemental::Transformer::List' => '0',
     'Pod::Weaver' => '3.100310'
   },
-  'VERSION' => '0.005',
+  'VERSION' => '0.006',
   'test' => {
     'TESTS' => 't/*.t'
   }
