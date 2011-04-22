@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::GETTY::AUTHORITY = 'cpan:GETTY';
 }
 BEGIN {
-  $Dist::Zilla::PluginBundle::GETTY::VERSION = '0.006';
+  $Dist::Zilla::PluginBundle::GETTY::VERSION = '0.007';
 }
 # ABSTRACT: BeLike::GETTY when you build your dists
 
@@ -80,8 +80,13 @@ sub configure {
 		PodSyntaxTests
 		Repository
 		GithubMeta
-		InstallRelease
 	));
+
+	$self->add_plugins([
+		'InstallRelease' => {
+			install_command => 'cpanm .',
+		}
+	]);
 
 	$self->add_plugins([
 		'Authority' => {
@@ -125,7 +130,7 @@ Dist::Zilla::PluginBundle::GETTY - BeLike::GETTY when you build your dists
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =head1 DESCRIPTION
 
@@ -141,6 +146,7 @@ This is the plugin bundle that GETTY uses.  It is equivalent to:
   [PodSyntaxTests]
   [GithubMeta]
   [InstallRelease]
+  install_command = cpanm .
 
   [Authority]
   authority = cpan:GETTY
