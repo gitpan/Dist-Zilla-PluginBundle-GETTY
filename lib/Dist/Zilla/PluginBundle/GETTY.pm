@@ -2,10 +2,10 @@ package Dist::Zilla::PluginBundle::GETTY;
 BEGIN {
   $Dist::Zilla::PluginBundle::GETTY::AUTHORITY = 'cpan:GETTY';
 }
-BEGIN {
-  $Dist::Zilla::PluginBundle::GETTY::VERSION = '0.007';
+{
+  $Dist::Zilla::PluginBundle::GETTY::VERSION = '0.008';
 }
-# ABSTRACT: BeLike::GETTY when you build your dists
+# ABSTRACT: B<DEPRECATED> PLEASE USE L<Dist::Zilla::PluginBundle::Author::GETTY> instead
 
 use Moose;
 use Moose::Autobox;
@@ -126,15 +126,15 @@ __END__
 
 =head1 NAME
 
-Dist::Zilla::PluginBundle::GETTY - BeLike::GETTY when you build your dists
+Dist::Zilla::PluginBundle::GETTY - B<DEPRECATED> PLEASE USE L<Dist::Zilla::PluginBundle::Author::GETTY> instead
 
 =head1 VERSION
 
-version 0.007
+version 0.008
 
 =head1 DESCRIPTION
 
-This is the plugin bundle that GETTY uses.  It is equivalent to:
+B<DEPRECATED> This is the plugin bundle that GETTY uses.  It is equivalent to:
 
   [@Basic]
 
